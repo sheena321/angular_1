@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="row"><app-first></app-first></div>
   <div class="row"><app-sec></app-sec></div>
   <div class="row"><app-third></app-third></div>
@@ -6,4 +6,52 @@
   <div class="row"><placement></placement></div>
   <div class="row"><footer></footer></div>
 
+</div> -->
+{{array1}}
+
+<!-- example of *ngFor --> 
+<ul *ngFor="let item of array1">
+  <li>{{item}}</li>
+</ul>
+<div *ngFor="let item of product">
+  <p>{{item.pname}}{{item.price}}</p>
+  <p>{{item.p_qty}}</p>
+  </div>
+  <!-- example of *ngIf --> 
+  <div style="background-color:blanchedalmond ;border:1px solid black" *ngIf="isAuthenticated"> First-DIV  ***Lorem ipsum dolor sit amet.</div> <!-- isauthenticated variable is true div visible else not showing -->
+  <div style="background-color: aqua;border:1px solid black">Second-DIV ***  Lorem ipsum, dolor sit amet consectetur adipisicing.</div>
+  <!-- example of *ngSwitch --> 
+  <div [ngSwitch]="switchVar">
+    <p style="background-color:rgb(212, 60, 174)" *ngSwitchCase="'p1'">FIRST PARA *** Lorem ipsum dolor sit amet.</p>
+    <p style="background-color:rgb(63, 201, 201)" *ngSwitchCase="'p2'">SECOND PARA  ***Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, saepe?</p>
+    <p style="background-color:rgb(41, 162, 30)" *ngSwitchCase="'p3'">THIRD PARA ***Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+  </div>
+<!-- example of *ngIf else  using templates -->
+  <div style="background-color:blanchedalmond ;border:1px solid black" *ngIf="var1;then temp2 else temp1">
 </div>
+  <ng-template #temp1>
+    FIRST TEMPLATE ***** Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dolorum veniam provident.
+  </ng-template>
+  <ng-template #temp2>
+    SECOND TEMPLATE ***** Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, enim.
+  </ng-template>
+
+<!-- example of property binding -->
+  <button [disabled]="var1">ok</button>
+
+  <!-- example of attribute binding -->
+  <table border="1">
+    <tr>
+      <td [attr.colspan]="2">Lorem ipsum dolor sit.</td><!-- here colspan dont have property so here used attribute binding-->
+    </tr>
+    <tr>
+      <td>Lorem, ipsum.</td>
+      <td>hhh</td>
+    </tr>
+  </table>
+  <!-- example of style binding -->
+<!-- <div [style.color]="'red'"> -->
+  <div [style.color]={{clor}}></div>
+  Lorem ipsum dolor sit amet consectetur adipisicing.
+</div>
+<p [style.font-size]="size?'50px':'10px'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae corrupti consectetur aperiam?</p>
