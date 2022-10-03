@@ -10,6 +10,10 @@ import { ThirdComponent } from './third/third.component';
 import { ShowComponent } from './show/show.component';
 import { PlacementComponent } from './placement/placement.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from '@angular/forms';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +24,15 @@ import { FooterComponent } from './footer/footer.component';
     ThirdComponent,
     ShowComponent,
     PlacementComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    ContactComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

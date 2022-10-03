@@ -10,6 +10,8 @@
 {{array1}}
 
 <!-- example of *ngFor --> 
+
+
 <ul *ngFor="let item of array1">
   <li>{{item}}</li>
 </ul>
@@ -50,8 +52,79 @@
     </tr>
   </table>
   <!-- example of style binding -->
-<!-- <div [style.color]="'red'"> -->
-  <div [style.color]={{clor}}></div>
+<div [style.color]="'red'">
+  <!-- <div [style.color]={{clor}}> -->
   Lorem ipsum dolor sit amet consectetur adipisicing.
 </div>
 <p [style.font-size]="size?'50px':'10px'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae corrupti consectetur aperiam?</p>
+<hr>
+
+
+
+<div style="display:block ;">
+  <!-- card1 -->
+
+  <div class="card" style="width: 18rem;display: inline-block;" *ngFor="let item of cardItem">
+    <img src="{{item.imges}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">name:{{item.pname1}}</h5>
+      <h3>price:{{item.price}}</h3>
+      <p class="card-text">stock{{item.stock}}</p>
+      <a href="#" class="btn btn-primary">Go to another page</a>
+    </div>
+  </div>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+</div>
+<hr>
+
+  <div class="container" *ngFor="let item of cardItem">
+    <div class="row">
+      <div class="col-5"> <img src="{{item.imges}}" alt=""></div>
+      <div class="col-7">
+        <p>name:{{item.pname1}}</p>
+        <p>price:{{item.price}}</p>
+        <p>stock:{{item.stock}}</p>
+        <p>discription: Lorem ipsum dolor sit amet.   </p>
+      </div>
+    </div>
+    <br>
+  </div>
+<!--example of class binding-->
+  <div [class.c1]='b'><!-- if b variable in .ts file is tru then it shows the style defined in the .css file ,which is call to this <div>-->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore incidunt obcaecati quis?</p>
+  </div>
+  <div [ngClass]="b?'c1':'c2'">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nisi fuga, et eius obcaecati iure vel ipsum!</p>
+  </div>
+  <button class="btn btn-primary">submit</button><!--chech bootstrap after installing-->
+
+<br><br>
+  <!--event binding-->
+  <button (click)="btnclick()" class="btn btn-primary">click me</button><br><br>
+ <input type="text" name="" id="" placeholder="enter" #temptext >
+  
+ <!-- <button (click)="btnclick1(temptext.value)">click me1</button>after click the button the value in textbox send to .ts file -->
+
+<!--two way binding-->
+<input type="text" name="" id="" placeholder="enter" #temptext [(ngModel)]="username1">
+<p>{{username1}}</p>
+
+<select name="" id="" class="form-control" [(ngModel)]="color1" style="width:50px;">
+  <option value="red ">red</option>
+  <option value="blue">blue</option>
+  <option value="green">green</option>
+</select><!--here value is passing to color1 variable in .ts file and color1variable value retrive by the <div> for its background changing-->
+<div [style.background-color]=color1 style="height:70px;width:100%">
+</div>
+<br>
+<br><br>
+<div style="background-color:antiquewhite ;display: block;">
+  <div style="display:inline-block ;"><a [routerLink]="'home'">home</a></div>
+  <div style="display:inline-block ;"><a [routerLink]="'about'">about</a></div>
+  <div style="display:inline-block ;"><a [routerLink]="'contact'">contact</a></div> 
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
+  

@@ -37,4 +37,38 @@ var1=false;//for if else
 var2="3"
 size=false;
 clor="blue";
+
+cardItem=[
+  {
+'pname1':'p1',
+'price':'565',
+'stock':'23',
+'imges':'assets/images/img1.jpeg'
+  },
+  {
+  'pname1':'p2',
+  'price':'345',
+  'stock':'34',
+  'imges':'assets/images/img1.jpeg'
+  },  
+  {
+  'pname1':'p3',
+  'price':'190',
+  'stock':'89',
+  'imges':'assets/images/img1.jpeg'
+   }
+]
+
+b=true;
+btnclick(){
+  console.log("clicked");
+}
+btnclick1(a:any){
+  console.log(a);
+}
+// to way binding ()
+username1="";
+
+color1="yellow";
+
 }
