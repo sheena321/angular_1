@@ -3,15 +3,17 @@ import { reduce } from 'rxjs';
 
 @Component({
   selector: 'common',
-   templateUrl: './app.component.html',
-  // template:`<h1 id="h1">hello1</h1>
+   templateUrl: './app.component.html', // here we are connecting our app.component.html(we use 2 methode either this or our own template given as below)
+  // template:`<h1 id="h1">hello1</h1>    // here we can create our own HTML page without directing to app.component.html 
   // <h2>ggg</h2> <p>jasjdasjd</p>`,
-  styleUrls: ['./app.component.css']
-  // styles: [(h1.style.color)='red']
+  styleUrls: ['./app.component.css'] // here calling app.component.css
+  // styles: [(h1.style.color)='red']  //here we can create our own style to html
 })
-export class AppComponent {
+export class AppComponent {  //under this braces we define functions and action oriented code(as controller in laravel)
   title = 'angular-app1';
 array1=['sss','fff','jjj','lll'];
+
+// json array
 
 product =[
   {
@@ -30,13 +32,14 @@ product =[
     'price':'90'
   }
 ]
+
 //ngif
-isAuthenticated=false;//this check in html file inside a div to show that div(if it is true)
+isAuthenticated=false;//this check in html file inside a div to check display it or not.Display div(if it is true)
 switchVar="p2";//for switch case
 var1=false;//for if else
 var2="3"
 size=false;
-clor="blue";
+clor=false;
 
 cardItem=[
   {
@@ -60,15 +63,17 @@ cardItem=[
 ]
 
 b=true;
+//one way binding
 btnclick(){
   console.log("clicked");
 }
 btnclick1(a:any){
   console.log(a);
 }
-// to way binding ()
+// two way binding ()
 username1="";
-
 color1="yellow";
-
+// for custome pipe
+students=["aaa",'bbb','ccc','dddd'];
+splchrname="asa$#hgjh&*"
 }

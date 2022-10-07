@@ -7,75 +7,99 @@
   <div class="row"><footer></footer></div>
 
 </div> -->
-{{array1}}
+<!-- {{array1}}         display all aray elements by caling arrayname-->
 
-<!-- example of *ngFor --> 
+<!-- *****example of *ngFor ****--> 
+<!-- printing elements in array1 using *ngFor -->
+
+    <!-- <ul *ngFor="let item of array1">
+          <li>{{item}}</li>
+          </ul> -->
 
 
-<ul *ngFor="let item of array1">
-  <li>{{item}}</li>
-</ul>
-<div *ngFor="let item of product">
-  <p>{{item.pname}}{{item.price}}</p>
-  <p>{{item.p_qty}}</p>
-  </div>
+
+<!-- displaying an json array -->
+
+      <!-- <div *ngFor="let item of product">
+      <p>{{item.pname}}{{item.price}}</p>
+      <p>{{item.p_qty}}</p>
+      </div>   -->
+
+
+
   <!-- example of *ngIf --> 
-  <div style="background-color:blanchedalmond ;border:1px solid black" *ngIf="isAuthenticated"> First-DIV  ***Lorem ipsum dolor sit amet.</div> <!-- isauthenticated variable is true div visible else not showing -->
-  <div style="background-color: aqua;border:1px solid black">Second-DIV ***  Lorem ipsum, dolor sit amet consectetur adipisicing.</div>
+  <!-- <div style="background-color:blanchedalmond ;border:1px solid black" *ngIf="isAuthenticated"> First-DIV  ***Lorem ipsum dolor sit amet.</div> isauthenticated variable is true div visible else not showing -->
+  <!-- <div style="background-color: aqua;border:1px solid black">Second-DIV ***  Lorem ipsum, dolor sit amet consectetur adipisicing.</div> -->
+  
+  
+  
+  
   <!-- example of *ngSwitch --> 
-  <div [ngSwitch]="switchVar">
-    <p style="background-color:rgb(212, 60, 174)" *ngSwitchCase="'p1'">FIRST PARA *** Lorem ipsum dolor sit amet.</p>
-    <p style="background-color:rgb(63, 201, 201)" *ngSwitchCase="'p2'">SECOND PARA  ***Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, saepe?</p>
-    <p style="background-color:rgb(41, 162, 30)" *ngSwitchCase="'p3'">THIRD PARA ***Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-  </div>
+        <!-- <div [ngSwitch]="switchVar">
+          <p style="background-color:rgb(212, 60, 174)" *ngSwitchCase="'p1'">FIRST PARA *** Lorem ipsum dolor sit amet.</p>
+          <p style="background-color:rgb(63, 201, 201)" *ngSwitchCase="'p2'">SECOND PARA  ***Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, saepe?</p>
+          <p style="background-color:rgb(41, 162, 30)" *ngSwitchCase="'p3'">THIRD PARA ***Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        </div> -->
+
+
+
 <!-- example of *ngIf else  using templates -->
-  <div style="background-color:blanchedalmond ;border:1px solid black" *ngIf="var1;then temp2 else temp1">
-</div>
-  <ng-template #temp1>
-    FIRST TEMPLATE ***** Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dolorum veniam provident.
-  </ng-template>
-  <ng-template #temp2>
-    SECOND TEMPLATE ***** Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, enim.
-  </ng-template>
+  <!-- <div style="background-color:blanchedalmond ;border:1px solid black" *ngIf="var1;then temp2 else temp1">
+  </div>
+      <ng-template #temp1>
+        FIRST TEMPLATE ***** Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dolorum veniam provident.
+      </ng-template>
+      <ng-template #temp2>
+        SECOND TEMPLATE ***** Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, enim.
+      </ng-template>
+ -->
+
 
 <!-- example of property binding -->
-  <button [disabled]="var1">ok</button>
+      <!-- <button [disabled]="var1">ok</button> -->
 
-  <!-- example of attribute binding -->
-  <table border="1">
+
+
+
+<!-- example of attribute binding -->
+    <!-- <table border="3 ">
     <tr>
-      <td [attr.colspan]="2">Lorem ipsum dolor sit.</td><!-- here colspan dont have property so here used attribute binding-->
+      <td [attr.colspan]="2">Lorem ipsum dolor sit.</td> here colspan dont have property so here used attribute binding
     </tr>
     <tr>
       <td>Lorem, ipsum.</td>
       <td>hhh</td>
     </tr>
-  </table>
+    </table> -->
+
+
+
   <!-- example of style binding -->
-<div [style.color]="'red'">
-  <!-- <div [style.color]={{clor}}> -->
-  Lorem ipsum dolor sit amet consectetur adipisicing.
-</div>
-<p [style.font-size]="size?'50px':'10px'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae corrupti consectetur aperiam?</p>
-<hr>
+    <!-- <div [style.color]="'red'"> -->
+                 <!-- <div [style.color]={{clor}}> -->
+    <!-- Lorem ipsum dolor sit amet consectetur adipisicing.
+    </div> -->
+    <!-- <p [style.font-size]="size?'50px':'10px'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae corrupti consectetur aperiam?</p>
+    <p [style.color]="clor?'red':'green'">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem recusandae id nisi.</p> -->
+
+    <!-- <hr> -->
 
 
+<!-- json array home work -->
 
-<div style="display:block ;">
-  <!-- card1 -->
-
-  <div class="card" style="width: 18rem;display: inline-block;" *ngFor="let item of cardItem">
-    <img src="{{item.imges}}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">name:{{item.pname1}}</h5>
-      <h3>price:{{item.price}}</h3>
-      <p class="card-text">stock{{item.stock}}</p>
-      <a href="#" class="btn btn-primary">Go to another page</a>
+<!-- <div style="display:block ;">
+creating as cards annd click on the button goto another page -->
+    <!-- <div class="card" style="width: 18rem;display: inline-block;" *ngFor="let item of cardItem">
+      <img src="{{item.imges}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">name:{{item.pname1}}</h5>
+          <h3>price:{{item.price}}</h3>
+          <p class="card-text">stock{{item.stock}}</p>
+          <a href="#" class="btn btn-primary">Go to another page</a>
+        </div>
     </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </div>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  
-</div>
 <hr>
 
   <div class="container" *ngFor="let item of cardItem">
@@ -89,34 +113,46 @@
       </div>
     </div>
     <br>
-  </div>
+  </div> -->
+
+
+
+
 <!--example of class binding-->
-  <div [class.c1]='b'><!-- if b variable in .ts file is tru then it shows the style defined in the .css file ,which is call to this <div>-->
+  <!-- <div [class.c1]='b'>if b variable in .ts file is tru then it shows the style defined in the .css file ,which is call to this <div>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore incidunt obcaecati quis?</p>
   </div>
   <div [ngClass]="b?'c1':'c2'">
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nisi fuga, et eius obcaecati iure vel ipsum!</p>
-  </div>
-  <button class="btn btn-primary">submit</button><!--chech bootstrap after installing-->
+  </div> -->
 
+
+ <!--check bootstrap after installing using command ng add bootstrap or npm install bootstrap-->
+ <!-- <button class="btn btn-primary">submit</button> -->
 <br><br>
   <!--event binding-->
-  <button (click)="btnclick()" class="btn btn-primary">click me</button><br><br>
- <input type="text" name="" id="" placeholder="enter" #temptext >
-  
- <!-- <button (click)="btnclick1(temptext.value)">click me1</button>after click the button the value in textbox send to .ts file -->
+  <!-- <button (click)="btnclick()" class="btn btn-primary">click me</button><br><br> -->
+
+  <!-- <input type="text" name="" id="" placeholder="enter" #temptext >
+  <button (click)="btnclick1(temptext.value)">click me1</button>after click the button the value in textbox send to .ts file
+<br><br> -->
+
 
 <!--two way binding-->
-<input type="text" name="" id="" placeholder="enter" #temptext [(ngModel)]="username1">
-<p>{{username1}}</p>
+<!-- <input type="text" name="" id="" placeholder="enter"  [(ngModel)]="username1">
+<p>{{username1}}</p> -->
 
-<select name="" id="" class="form-control" [(ngModel)]="color1" style="width:50px;">
+<!-- <select name="" id="" class="form-control" [(ngModel)]="color1" style="width:50px;">
   <option value="red ">red</option>
   <option value="blue">blue</option>
   <option value="green">green</option>
-</select><!--here value is passing to color1 variable in .ts file and color1variable value retrive by the <div> for its background changing-->
-<div [style.background-color]=color1 style="height:70px;width:100%">
-</div>
+</select> -->
+<!--above, value is passing to color1 variable in .ts file and color1variable value retrive by the <div> for its background changing-->
+<!-- <div [style.background-color]=color1 style="height:70px;width:100%">
+</div> -->
+
+
+<!-- path setting using [routerLink]="'...'"  goto app.routing.module.ts-->
 <br>
 <br><br>
 <div style="background-color:antiquewhite ;display: block;">
@@ -124,7 +160,13 @@
   <div style="display:inline-block ;"><a [routerLink]="'about'">about</a></div>
   <div style="display:inline-block ;"><a [routerLink]="'contact'">contact</a></div> 
 </div>
+
+
 <div>
   <router-outlet></router-outlet>
 </div>
+<!-- custom pipe -->
+<p>name in descending order: {{students|sort:"descending"}}</p>
+<p>name in ascending order: {{students|sort:"ascending"}}</p>
+<p>{{arr1|"filter"}}</p>
   

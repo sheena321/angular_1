@@ -1,1 +1,17 @@
-<H1>Home</H1>
+
+<H1>Home page</H1>
+ <div style="display:block ;">
+creating as cards annd click on the button goto another page -->
+    
+          <a [routerLink]="'about'" >Go to about page</a>
+       <!-- using of pipes it transform the data html file itself (not goto .ts file)-->
+       <p>{{usrname|uppercase}}</p>
+       <p>current date={{today|date}}</p>
+       <p>{{amount|currency:"INR"}}</p>
+       <p>{{amount|percent}}</p>
+<!-- 2.5 means after decimal 5 values are available if 2.3 3 values availabe -->
+       <p>{{amount|number:'3.5'}}</p>
+       
+          <div [style.background-color]="'red'" style="height: 50px;width:50px">
+        <router-outlet></router-outlet>
+       </div>

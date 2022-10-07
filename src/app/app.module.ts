@@ -14,7 +14,10 @@ import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
+import { SortPipe } from './pipe/sort';//we have to type this import because we are mannually declaring the pipeclass
+import { filterPipe } from './trim/trim';
+import { Service1Service } from './services/service1.service';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +30,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FooterComponent,
     AboutComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SortPipe,
+    filterPipe,
+    LoginComponent,
+   
+  ],
+  providers: [
+    Service1Service
   ],
   imports: [
     BrowserModule,
